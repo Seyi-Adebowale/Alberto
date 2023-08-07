@@ -255,6 +255,7 @@ marquee {
 }
 .footer-social-icon {
   font-size: 15px;
+  padding: 10px;
   height: 34px;
   width: 34px;
   line-height: 34px;
