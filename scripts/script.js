@@ -243,7 +243,6 @@ app.controller("ProductsController", function ($scope) {
             const img = document.createElement("img");
             img.src = item.image;
             img.alt = "gallery-image";
-            // img.width = '300';
             img.height = "220";
             img.className = "lazy-load-image";
 
@@ -380,7 +379,7 @@ app.controller("HomeController", function ($scope, $http) {
     popupContainer.style.display = "none";
   });
 
-  //Home page animation
+  // //Home page animation
   const text = new SplitType("#text");
 
   const tl = gsap.timeline({ defaults: { ease: "power1.out" } });

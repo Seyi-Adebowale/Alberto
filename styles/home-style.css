@@ -45,7 +45,7 @@
   padding: 10px 30px;
   border-radius: 5px;
   font-weight: bold;
-  opacity: 0; /* Initially set opacity to 0 for bounce-in animation */
+  opacity: 0; 
 }
 
 .carousel-text h3 {
@@ -57,37 +57,35 @@
   -webkit-text-stroke: 2px black;
 }
 .carousel-item.active .carousel-text {
-  animation: bounceIn 1s forwards; /* Apply the bounce-in animation to the active carousel item's caption */
+  animation: bounceIn 1s forwards; 
 }
 
 @keyframes bounceIn {
   0% {
-    transform: translateY(-500px); /* Initial position off the screen */
-    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(-500px); 
+    opacity: 0; 
   }
   30% {
-    transform: translateY(20px); /* Bounce up */
-    opacity: 1; /* Make the text visible at 30% */
+    transform: translateY(20px); 
+    opacity: 1; 
   }
   45% {
-    transform: translateY(-10px); /* Slightly bounce back */
+    transform: translateY(-10px);
   }
   60% {
-    transform: translateY(5px); /* Slightly bounce up */
+    transform: translateY(5px);
   }
   75% {
-    transform: translateY(-2px); /* Slightly bounce back */
+    transform: translateY(-2px);
   }
   100% {
-    transform: translateY(0); /* Back to the original position */
-    opacity: 1; /* Fully visible */
+    transform: translateY(0); 
+    opacity: 1;
   }
 }
-
-/* Example element to apply the animation */
 .bounce-in {
-  animation: bounceIn 2s ease 0.5s forwards; /* Duration set to 2 seconds, delay set to 0.5 seconds, animation-fill-mode set to forwards */
-  opacity: 0; /* Set initial opacity to 0 */
+  animation: bounceIn 2s ease 0.5s forwards; 
+  opacity: 0;
 }
 
 .summary {

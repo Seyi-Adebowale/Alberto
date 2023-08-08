@@ -80,12 +80,9 @@ ul li.active-link a {
 ul li.active-dropdown > a {
   color: #fd4381; 
 }
-/* Style for the dropdown menu */
 .navlinks ul li.support-dropdown {
   position: relative;
 }
-
-/* Style for the dropdown menu items */
 .navlinks ul li.support-dropdown .dropdown-menu {
   display: none;
   position: absolute;
@@ -95,27 +92,21 @@ ul li.active-dropdown > a {
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
-/* Show the dropdown menu when hovering over the "Support" link */
 .navlinks ul li.support-dropdown:hover .dropdown-menu {
   display: block;
 }
-
-/* Style for the dropdown menu items */
 .navlinks ul li.support-dropdown .dropdown-menu li {
   margin: 20px 0;
 }
 .selected {
   color: #fd4381;
 }
-
 .watch-section {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
-
 .watch-container {
   display: flex;
   flex-wrap: wrap;
@@ -222,7 +213,6 @@ h2.section-heading {
 .ticker-container {
   background-color: #333;
   color: #fff;
-  /* padding: 5px; */
   position: fixed;
   bottom: 0;
   left: 0;
@@ -307,7 +297,6 @@ marquee {
   background: black;
   z-index: 9999;
 }
-
 .header h1 {
   font-size: 2rem;
   text-transform: uppercase;
@@ -316,7 +305,6 @@ marquee {
   line-height: 5.9rem;
   color: #fff;
 }
-
 .ling {
   content: "";
   width: 0;
@@ -326,7 +314,6 @@ marquee {
   transform: translateX(-50%);
   background: #ff0202;
 }
-
 .char {
   transform: translateY(115px);
   transition: transform 0.5s;
@@ -356,7 +343,6 @@ marquee {
     width: 60%;
   }
 }
-
 @media (max-width: 800px) {
   .nav-icon {
     display: block !important;
