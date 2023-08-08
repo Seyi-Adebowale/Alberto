@@ -350,3 +350,17 @@
     display: none;
   }
 }
+@media (max-width: 565px) {
+  .review {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 5px 0;
+  }
+  .person {
+    font-size: 14px;
+  }
+  .testimonial .carousel-indicators [data-bs-target] {
+    height: 8px;
+    width: 8px;
+  }
+}

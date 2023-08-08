@@ -78,7 +78,7 @@ ul li.active-link a {
   color: #fd4381;
 }
 ul li.active-dropdown > a {
-  color: #fd4381; 
+  color: #fd4381;
 }
 .navlinks ul li.support-dropdown {
   position: relative;
@@ -169,13 +169,16 @@ button a {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-#popupContent, #popupContent2{
+#popupContent,
+#popupContent2 {
   text-align: center;
 }
-#popupContent ul, #popupContent2 ul{
+#popupContent ul,
+#popupContent2 ul {
   list-style: none;
 }
-#popupContent img, #popupContent2 img{
+#popupContent img,
+#popupContent2 img {
   width: 200px;
   height: 300px;
   margin: auto;
@@ -401,5 +404,13 @@ marquee {
     position: absolute;
     right: 0;
     width: 50%;
+  }
+  .popup {
+    max-width: 75%;
+  }
+}
+@media (max-width: 375px){
+  header nav .logo img{
+    width: 180px;
   }
 }
