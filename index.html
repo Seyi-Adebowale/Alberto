@@ -57,22 +57,22 @@
         <div class="logo">
           <img src="images/logo4.png" alt="" />
         </div>
-        <div class="navlinks" onclick="hideMenu()">
+        <div class="navlinks" >
           <div class="close-icon nav-icon" id="close">
             <i class="fas fa-times" onclick="hideMenu()"></i>
           </div>
           <ul>
             <li ng-class="{ 'active-link': isActive('/home') }">
-              <a href="#/!">Home</a>
+              <a href="#/!" onclick="hideMenu()">Home</a>
             </li>
             <li ng-class="{ 'active-link': isActive('/products') }">
-              <a href="#!products">Products</a>
+              <a href="#!products" onclick="hideMenu()">Products</a>
             </li>
             <li ng-class="{ 'active-link': isActive('/technology') }">
-              <a href="#!technology">Technology</a>
+              <a href="#!technology" onclick="hideMenu()">Technology</a>
             </li>
             <li ng-class="{ 'active-link': isActive('/store-locator') }">
-              <a href="#!store-locator">Store Locator</a>
+              <a href="#!store-locator" onclick="hideMenu()">Store Locator</a>
             </li>
             <li
               class="support-dropdown"
@@ -81,10 +81,10 @@
               <a href="" ng-click="toggleSupportDropdown()">Support &plus;</a>
               <ul class="dropdown-menu">
                 <li ng-class="{ 'active-link': isActive('/about') }">
-                  <a href="#!about">About Us</a>
+                  <a href="#!about" onclick="hideMenu()">About Us</a>
                 </li>
                 <li ng-class="{ 'active-link': isActive('/contact') }">
-                  <a href="#!contact">Contact Us</a>
+                  <a href="#!contact" onclick="hideMenu()">Contact Us</a>
                 </li>
               </ul>
             </li>
