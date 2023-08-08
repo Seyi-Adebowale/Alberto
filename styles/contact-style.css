@@ -42,6 +42,7 @@
   color: #fff;
   background-color: #fd4381;
   border: none;
+  padding:  5px 10px;
 }
 .view-all-button:hover {
   background-color: #fff;
