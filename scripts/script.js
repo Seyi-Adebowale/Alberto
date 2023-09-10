@@ -79,31 +79,6 @@ app.run(function ($rootScope, $location, $route) {
   });
 });
 
-// Replace with your Measurement ID
-const measurementId = "G-83CCBKG5V6";
-
-// Send a custom event to GA4
-gtag("event", "page_view", {
-  send_to: measurementId,
-});
-
-// Fetch visitor count data
-fetch(
-  `https://www.googleapis.com/analytics/v3/data/ga?ids=ga:${measurementId}&metrics=ga:users&start-date=30daysAgo&end-date=today`
-)
-  .then((response) => response.json())
-  .then((data) => {
-    // Extract the visitor count
-    const visitorCount = data.rows[0][0];
-
-    // Update the HTML element with the visitor count
-    document.getElementById("count").textContent = `${visitorCount}`;
-  })
-  .catch((error) => {
-    console.error("Error fetching visitor count:", error);
-  });
-// console.log(visitorCount);
-
 //Store locator controller
 app.controller("StoreLocatorController", function ($scope) {
   const addresses = [
@@ -491,21 +466,21 @@ getCurrentLocation();
 // Update the ticker every minute (60,000 milliseconds)
 setInterval(getCurrentLocation, 60000);
 
-// /// Function to fetch and update the visitor count
-// function updateVisitorCount() {
-//   let count = parseInt(localStorage.getItem("visitorCount")) || 0;
-//   count++; // Increment the count
+/// Function to fetch and update the visitor count
+function updateVisitorCount() {
+  let count = parseInt(localStorage.getItem("visitorCount")) || 10;
+  count++; // Increment the count
 
-//   // Update the count on the page
-//   const countElement = document.getElementById("count");
-//   countElement.textContent = count;
+  // Update the count on the page
+  const countElement = document.getElementById("count");
+  countElement.textContent = count;
 
-//   // Store the updated count in local storage
-//   localStorage.setItem("visitorCount", count.toString());
-// }
+  // Store the updated count in local storage
+  localStorage.setItem("visitorCount", count.toString());
+}
 
-// // Call the function to update the visitor count when the page loads
-// document.addEventListener("DOMContentLoaded", updateVisitorCount);
+// Call the function to update the visitor count when the page loads
+document.addEventListener("DOMContentLoaded", updateVisitorCount);
 
 // JavaScript to toggle the mobile navigation
 const navLinks = document.querySelector(".navlinks");

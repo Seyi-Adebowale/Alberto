@@ -43,20 +43,6 @@
     ></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-83CCBKG5V6"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-83CCBKG5V6");
-    </script>
     <link ng-href="{{ pageCSS }}" rel="stylesheet" />
     <title>{{ pageTitle }}</title>
   </head>
@@ -104,7 +90,7 @@
         </div>
         <div class="visitor-count-container">
           <div class="visitor-count-box">
-            <span id="count">0</span>
+            <span id="count"></span>
             <span class="visitor-count-label">Visitors</span>
           </div>
         </div>
