@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
     "shufflejs": "^6.1.0"
+  },
+  "devDependencies": {
+    "gulp-sass": "^5.1.0"
   }
 }
