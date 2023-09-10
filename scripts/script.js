@@ -33,7 +33,7 @@ app.config(function ($routeProvider) {
         pageTitle: "Store Locator - Alberto Watch Company",
         pageCSS: "../styles/store-style.css",
       },
-    }) 
+    })
     .when("/about", {
       templateUrl: "about.html",
       data: {
@@ -79,22 +79,30 @@ app.run(function ($rootScope, $location, $route) {
   });
 });
 
- // Replace with your Google Analytics Property ID
- const trackingId = 'G-83CCBKG5V6';
+// Replace with your Measurement ID
+const measurementId = "G-83CCBKG5V6";
 
- // Fetch visitor count data
- fetch(`https://www.googleapis.com/analytics/v3/data/ga?ids=ga:${trackingId}&metrics=ga:users&start-date=30daysAgo&end-date=today`)
-   .then((response) => response.json())
-   .then((data) => {
-     // Extract the visitor count
-     const visitorCount = data.rows[0][0];
-     
-     // Update the HTML element with the visitor count
-     document.getElementById('count').textContent = `${visitorCount}`;
-   })
-   .catch((error) => {
-     console.error('Error fetching visitor count:', error);
-   });
+// Send a custom event to GA4
+gtag("event", "page_view", {
+  send_to: measurementId,
+});
+
+// Fetch visitor count data
+fetch(
+  `https://www.googleapis.com/analytics/v3/data/ga?ids=ga:${measurementId}&metrics=ga:users&start-date=30daysAgo&end-date=today`
+)
+  .then((response) => response.json())
+  .then((data) => {
+    // Extract the visitor count
+    const visitorCount = data.rows[0][0];
+
+    // Update the HTML element with the visitor count
+    document.getElementById("count").textContent = `${visitorCount}`;
+  })
+  .catch((error) => {
+    console.error("Error fetching visitor count:", error);
+  });
+// console.log(visitorCount);
 
 //Store locator controller
 app.controller("StoreLocatorController", function ($scope) {
