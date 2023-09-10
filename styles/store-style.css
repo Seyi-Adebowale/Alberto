@@ -16,7 +16,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  outline: 1px solid red;
 }
 .address-item {
   margin: 15px;
