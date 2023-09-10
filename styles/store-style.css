@@ -23,7 +23,9 @@
   box-shadow: 0 0 10px grey;
   border-radius: 10px;
   align-items: center;
-  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .contact span {
   font-size: 2rem;
@@ -91,12 +93,11 @@
   #address-list {
     width: 95%;
     margin: auto;
-    height: 25vh;
   }
   .address-item {
     min-width: 250px;
   }
   .address-text {
-    height: 80px;
+    height: 85px;
   }
 }
